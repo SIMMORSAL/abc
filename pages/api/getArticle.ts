@@ -23,7 +23,8 @@ export default function handler(
 
   if (req.query.id === "1")
     res.status(200).json({
-      title: "TAG Heuer's Limited Edition Mario Kart Watch Costs $25,000",
+      title:
+        "TAG Heuer's Limited Edition Mario Kart Watch Costs $25,000",
       summary:
         "There's a more budget-friendly $4,300 version launching Thursday -- but neither of them are smartwatches.",
       content: [
@@ -84,7 +85,7 @@ For the rest of us, it's some appealing eye candy just in time for Halloween.
       author: "Eric Mack",
       assets: [
         "https://www.cnet.com/a/img/resize/3491fe331e64578fb656f18ac80a956206df65fd/hub/2022/10/19/b5925c18-5f1f-48d7-aa47-b5091a5670d6/stsci-01gf49bhzj1wx8w803281hrbcw.jpg?auto=webp&fit=crop&height=675&width=1200",
-        "/videos/webb.mp4",
+        "https://www.youtube.com/watch?v=1__KBHIo_xs",
         "https://media.npr.org/assets/img/2021/07/16/hubble-about-eagle-nebular-visible-infrared_wide-d4f2fe1d6bb297c3aeb68c57d3fd1034febfa8ec-s800-c85.webp",
       ],
       template_id: 2,

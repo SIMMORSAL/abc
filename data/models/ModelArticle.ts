@@ -8,3 +8,8 @@ export interface ModelArticle {
   assets?: string[];
   template_id?: number;
 }
+
+export const TEMPLATE_ID = {
+  one: 1,
+  two: 2,
+};

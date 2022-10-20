@@ -8,9 +8,6 @@ import { getArticle } from "../data/remote/EndpointsArticle";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
-  const { data, status } = useQuery(["Articles", 1], getArticle);
-  console.log(`11111  Home:  ${data?.title}`);
-
   return (
     <Flex align={"center"} justify={"center"} h={"100vh"}>
       <VStack>
