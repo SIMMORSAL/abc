@@ -5,7 +5,7 @@ export async function getArticle({
 }: {
   queryKey: Array<string | number>;
 }): Promise<ModelArticle> {
-  const response = await fetch(`/api/getArticle?id=${queryKey}`, {
+  const response = await fetch(`/api/getArticle?id=${queryKey[1]}`, {
     method: "POST",
   });
   return response.json();
