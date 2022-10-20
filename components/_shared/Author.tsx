@@ -12,8 +12,11 @@ export default function Author(p: Props) {
       by{" "}
       <Text
         as={"span"}
-        color={"aqua"}
-        _hover={{ cursor: "pointer" }}
+        color={"blue.600"}
+        _hover={{
+          cursor: "pointer",
+          textDecoration: "underline",
+        }}
       >
         {p.author}
       </Text>

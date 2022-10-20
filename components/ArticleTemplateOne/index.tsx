@@ -9,6 +9,8 @@ import {
 } from "@chakra-ui/react";
 import Author from "../_shared/Author";
 import ReactPlayer from "react-player";
+import Category from "../_shared/Category";
+import Tags from "../_shared/Tags";
 
 interface Props {
   article: ModelArticle;
@@ -53,7 +55,11 @@ export default function ArticleTemplateOne(p: Props) {
             rounded={16}
             overflow={"hidden"}
           >
-            <ReactPlayer width={"100%"} url={asset} />
+            <ReactPlayer
+              width={"100%"}
+              url={asset}
+              controls={true}
+            />
           </Box>
         ) : (
           <Image
@@ -75,21 +81,31 @@ export default function ArticleTemplateOne(p: Props) {
   }
 
   return (
-    <Flex direction={"column"}>
+    <Box bg={"#eeeeee"} p={"32px 16px 100px 16px"}>
       <Text as={"title"}>{p.article.title}</Text>
-      <Heading w={"100%"} size={"xl"} mb={"8px"}>
-        {p.article.title}
-      </Heading>
-      {p.article.author && <Author author={p.article.author} />}
-      {p.article.summary && (
-        <Heading as={"i"} mb={8} size={"md"}>
-          {p.article.summary}
+      <Flex direction={"column"}>
+        {p.article.category && (
+          <Category category={p.article.category} />
+        )}
+        <Heading w={"100%"} size={"xl"} mb={"2px"}>
+          {p.article.title}
         </Heading>
-      )}
-      {mainImage && (
-        <Image src={mainImage} alt={mainImage} rounded={16} />
-      )}
-      {articleContent}
-    </Flex>
+        {p.article.author && <Author author={p.article.author} />}
+        {p.article.summary && (
+          <Heading as={"i"} mb={8} size={"md"}>
+            {p.article.summary}
+          </Heading>
+        )}
+        {mainImage && (
+          <Image src={mainImage} alt={mainImage} rounded={16} />
+        )}
+        {articleContent}
+        {p.article.tags && p.article.tags.length > 0 && (
+          <Box mt={"24px"}>
+            <Tags tags={p.article.tags} />
+          </Box>
+        )}
+      </Flex>
+    </Box>
   );
 }

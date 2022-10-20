@@ -20,21 +20,18 @@ export default function PageArticle(p: Props) {
   );
 
   return (
-    <Box
-      w={"100%"}
-      maxWidth={MAX_WIDTH}
-      m={"auto"}
-      p={"32px 16px 0 16px"}
-    >
-      {data !== undefined ? (
-        data.template_id === TEMPLATE_ID.one ? (
-          <ArticleTemplateOne article={data} />
+    <Box bg={"#eaeaea"}>
+      <Box w={"100%"} maxWidth={MAX_WIDTH} m={"auto"}>
+        {data !== undefined ? (
+          data.template_id === TEMPLATE_ID.one ? (
+            <ArticleTemplateOne article={data} />
+          ) : (
+            <ArticleTemplateOne article={data} />
+          )
         ) : (
-          <ArticleTemplateOne article={data} />
-        )
-      ) : (
-        <></>
-      )}
+          <></>
+        )}
+      </Box>
     </Box>
   );
 }
