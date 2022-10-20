@@ -26,7 +26,7 @@ export default function PageArticle(p: Props) {
           data.template_id === TEMPLATE_ID.one ? (
             <ArticleTemplateOne article={data} />
           ) : (
-            <ArticleTemplateOne article={data} />
+            <ArticleTemplateTwo article={data} />
           )
         ) : (
           <></>

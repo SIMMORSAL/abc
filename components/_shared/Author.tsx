@@ -8,7 +8,7 @@ interface Props {
 
 export default function Author(p: Props) {
   return (
-    <Text mb={"32px"} as={"i"}>
+    <Text as={"i"}>
       by{" "}
       <Text
         as={"span"}
