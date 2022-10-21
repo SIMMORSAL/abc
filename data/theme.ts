@@ -8,3 +8,4 @@ const config: ThemeConfig = {
 export const theme = extendTheme({ config });
 
 export const MAX_WIDTH = "900px";
+export const MAX_WIDTH_ALTERNATE = "600px";

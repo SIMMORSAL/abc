@@ -11,6 +11,7 @@ import Category from "../_shared/Category";
 import Author from "../_shared/Author";
 import ArticleContent from "../ArticleContent";
 import Tags from "../_shared/Tags";
+import { MAX_WIDTH_ALTERNATE } from "../../data/theme";
 
 interface Props {
   article: ModelArticle;
@@ -36,7 +37,7 @@ export default function ArticleTemplateTwo(p: Props) {
     <Box
       bg={"#d8dee3"}
       p={"32px 16px 100px 16px"}
-      maxWidth={600}
+      maxWidth={MAX_WIDTH_ALTERNATE}
       m={"auto"}
     >
       <Text as={"title"}>{p.article.title}</Text>

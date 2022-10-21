@@ -12,10 +12,19 @@ type Data = {
   template_id?: number;
   error?: string;
 };
-export default function handler(
+
+/**
+ * This is a mock endpoint to use while developing the website
+ */
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
+  // random delay before data is retrieved for testing purposes
+  await new Promise((r) =>
+    setTimeout(r, 100 + Math.random() * 100)
+  );
+
   if (req.method !== "POST") {
     res.status(404).json({ error: "not found" });
     return;
