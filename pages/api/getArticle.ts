@@ -61,7 +61,7 @@ This isn't TAG Heuer's first Nintendo collaboration; the luxury watch brand also
       ],
       template_id: 1,
     });
-  else
+  else if (req.query.id === "2")
     res.status(200).json({
       title:
         "NASA's Webb Telescope Captures Dazzling View of 'Pillars of Creation'",
@@ -98,5 +98,9 @@ For the rest of us, it's some appealing eye candy just in time for Halloween.
         "https://media.npr.org/assets/img/2021/07/16/hubble-about-eagle-nebular-visible-infrared_wide-d4f2fe1d6bb297c3aeb68c57d3fd1034febfa8ec-s800-c85.webp",
       ],
       template_id: 2,
+    });
+  else
+    res.status(400).json({
+      error: "Please provide an id.",
     });
 }

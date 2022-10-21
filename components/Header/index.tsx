@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Logo from "./Logo";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export const HEADER_HEIGHT = 80;
 
@@ -27,12 +28,23 @@ export default function Header() {
             <Logo />
           </Box>
         </Link>
-        <Flex
-          w={"100%"}
-          h={"100%"}
-          direction={"row"}
-          justify={"end"}
-          align={"center"}
+        <motion.div
+          css={css`
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            align-items: center;
+          `}
+          initial={{
+            translateX: 100,
+            opacity: 0,
+          }}
+          animate={{
+            translateX: 0,
+            opacity: 1,
+          }}
         >
           <Text
             fontFamily={"monospace"}
@@ -45,7 +57,7 @@ export default function Header() {
           >
             Login
           </Text>
-        </Flex>
+        </motion.div>
       </Flex>
     </Box>
   );

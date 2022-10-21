@@ -33,12 +33,19 @@ export default function PageArticle(p: Props) {
   return (
     <Box bg={"#eaeaea"}>
       <Box display={"grid"}>
-        <Box
-          w={"100%"}
-          m={"auto"}
-          gridRow={1}
-          gridColumn={1}
-          maxWidth={MAX_WIDTH}
+        <motion.div
+          css={css`
+            grid-row: 1;
+            grid-column: 1;
+            display: flex;
+            width: 100%;
+            margin: auto;
+            max-width: ${MAX_WIDTH};
+          `}
+          animate={{
+            translateY: data ? 0 : 150,
+            opacity: data ? 1 : 0,
+          }}
         >
           {data !== undefined ? (
             data.template_id === TEMPLATE_ID.one ? (
@@ -49,7 +56,7 @@ export default function PageArticle(p: Props) {
           ) : (
             <></>
           )}
-        </Box>
+        </motion.div>
         <Flex
           w={"100%"}
           h={`calc(100vh - ${HEADER_HEIGHT}px)`}
@@ -67,7 +74,7 @@ export default function PageArticle(p: Props) {
               opacity: isLoading ? 1 : 0,
             }}
             transition={{
-              duration: 1,
+              duration: 0.5,
             }}
           >
             <LoadingSpinner />
