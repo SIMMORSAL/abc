@@ -18,7 +18,7 @@ type Data = {
  */
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<Data | Error>
 ) {
   // random delay before data is retrieved for testing purposes
   await new Promise((r) =>
@@ -99,8 +99,5 @@ For the rest of us, it's some appealing eye candy just in time for Halloween.
       ],
       template_id: 2,
     });
-  else
-    res.status(400).json({
-      error: "Please provide an id.",
-    });
+  else res.status(400).send(new Error("Please provide an id."));
 }
