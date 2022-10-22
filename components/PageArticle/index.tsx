@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { css } from "@emotion/react";
-import {
-  Box,
-  Button,
-  Flex,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Text, useColorModeValue } from "@chakra-ui/react";
 import { useQuery } from "react-query";
 import { getArticle } from "../../data/remote/EndpointsArticle";
 import { TEMPLATE_ID } from "../../data/models/ModelArticle";

@@ -21,9 +21,7 @@ export default async function handler(
   res: NextApiResponse<Data | Error>
 ) {
   // random delay before data is retrieved for testing purposes
-  await new Promise((r) =>
-    setTimeout(r, 100 + Math.random() * 100)
-  );
+  await new Promise((r) => setTimeout(r, 100 + Math.random() * 100));
 
   if (req.method !== "POST") {
     res.status(404).json({ error: "not found" });
@@ -32,8 +30,7 @@ export default async function handler(
 
   if (req.query.id === "1")
     res.status(200).json({
-      title:
-        "TAG Heuer's Limited Edition Mario Kart Watch Costs $25,000",
+      title: "TAG Heuer's Limited Edition Mario Kart Watch Costs $25,000",
       summary:
         "There's a more budget-friendly $4,300 version launching Thursday -- but neither of them are smartwatches.",
       content: [
@@ -63,8 +60,7 @@ This isn't TAG Heuer's first Nintendo collaboration; the luxury watch brand also
     });
   else if (req.query.id === "2")
     res.status(200).json({
-      title:
-        "NASA's Webb Telescope Captures Dazzling View of 'Pillars of Creation'",
+      title: "NASA's Webb Telescope Captures Dazzling View of 'Pillars of Creation'",
       summary:
         'The "Pillars of Creation," an area of intense star formation, as seen by the Near-Infrared Camera of NASA\'s James Webb Space Telescope.',
       content: [

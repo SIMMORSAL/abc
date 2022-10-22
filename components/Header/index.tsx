@@ -22,11 +22,7 @@ export default function Header() {
   const isLight = colorMode === "light";
 
   return (
-    <Box
-      bg={colorBg}
-      w={"100%"}
-      borderBottom={"1px solid #9b9b9b"}
-    >
+    <Box bg={colorBg} w={"100%"} borderBottom={"1px solid #9b9b9b"}>
       <Flex
         w={"100%"}
         h={`${HEADER_HEIGHT - 1}px`} // * -1 is for the border

@@ -20,15 +20,12 @@ interface Props {
 }
 
 export default function ArticleTemplateOne(p: Props) {
-  const [mainImage, setMainImage] = useState<
-    undefined | string
-  >();
+  const [mainImage, setMainImage] = useState<undefined | string>();
   const colorBg = useColorModeValue(lArticleBg1, dArticleBg1);
 
   useEffect(() => {
     if (p.article && p.article.assets) {
-      mainImage === undefined &&
-        setMainImage(p.article.assets[0]);
+      mainImage === undefined && setMainImage(p.article.assets[0]);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -40,9 +37,7 @@ export default function ArticleTemplateOne(p: Props) {
     <Box bg={colorBg} p={"32px 16px 100px 16px"}>
       <Text as={"title"}>{p.article.title}</Text>
       <Flex direction={"column"}>
-        {p.article.category && (
-          <Category category={p.article.category} />
-        )}
+        {p.article.category && <Category category={p.article.category} />}
         <Heading w={"100%"} size={"xl"} mb={"2px"}>
           {p.article.title}
         </Heading>
@@ -56,13 +51,8 @@ export default function ArticleTemplateOne(p: Props) {
             {p.article.summary}
           </Heading>
         )}
-        {mainImage && (
-          <Image src={mainImage} alt={mainImage} rounded={16} />
-        )}
-        <ArticleContent
-          content={p.article.content}
-          assets={p.article.assets}
-        />
+        {mainImage && <Image src={mainImage} alt={mainImage} rounded={16} />}
+        <ArticleContent content={p.article.content} assets={p.article.assets} />
         {p.article.tags && p.article.tags.length > 0 && (
           <Box mt={"24px"}>
             <Tags tags={p.article.tags} />

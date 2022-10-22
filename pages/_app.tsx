@@ -1,10 +1,6 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import {
-  ChakraProvider,
-  ThemeProvider,
-  VStack,
-} from "@chakra-ui/react";
+import { ChakraProvider, ThemeProvider, VStack } from "@chakra-ui/react";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { theme } from "../configs/theme";
 import Header from "../components/Header";

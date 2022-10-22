@@ -22,9 +22,7 @@ describe("Article", () => {
 
       // checking if error box appears.
       // using a 10 sec timeout to wait for 4 api call fails
-      cy.get("#error-box", { timeout: 10000 }).should(
-        "be.visible"
-      );
+      cy.get("#error-box", { timeout: 10000 }).should("be.visible");
     });
   });
 });

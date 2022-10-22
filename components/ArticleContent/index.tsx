@@ -8,10 +8,7 @@ interface Props {
   assets?: string[];
 }
 
-export default function ArticleContent({
-  content,
-  assets,
-}: Props) {
+export default function ArticleContent({ content, assets }: Props) {
   // * Below is where the article content are made. Each content
   // * is paired with an image or video asset.
   let articleContent: React.ReactNode[] = [];
@@ -26,27 +23,11 @@ export default function ArticleContent({
         // * Video detection needs to be expanded upon after
         // * defining some rules with the backend devs
         asset.includes("youtube.com") ? (
-          <Box
-            key={asset}
-            mt={"32px"}
-            w={"100%"}
-            rounded={16}
-            overflow={"hidden"}
-          >
-            <ReactPlayer
-              width={"100%"}
-              url={asset}
-              controls={true}
-            />
+          <Box key={asset} mt={"32px"} w={"100%"} rounded={16} overflow={"hidden"}>
+            <ReactPlayer width={"100%"} url={asset} controls={true} />
           </Box>
         ) : (
-          <Image
-            key={asset}
-            mt={"32px"}
-            rounded={16}
-            src={asset}
-            alt={asset}
-          />
+          <Image key={asset} mt={"32px"} rounded={16} src={asset} alt={asset} />
         )
       );
     }
