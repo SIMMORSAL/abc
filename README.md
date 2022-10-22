@@ -3,10 +3,13 @@
 A news source for the cool kids!
 
 ### Soheil Sisakht
-##### Live demo: abcnews...
+##### Live demo:
+- [abc-roan.vercel.app](http://abc-roan.vercel.app/) 
+- [abc.amp.aws](http://abc-roan.vercel.app/)
 ##### Tech used:
-- Next - TypeScript - Chakra | Amplify - GitHub CI/CD
-// TODO add versions
+- Next (v12.3.1) - TypeScript (v4.8.4) - Chakra (v2.3.6) 
+- Amplify - GitHub CI/CD
+
 
 This is my application for the article showing 
 system challenge. 
