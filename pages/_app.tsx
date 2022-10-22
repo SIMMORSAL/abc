@@ -6,7 +6,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { QueryClientProvider, QueryClient } from "react-query";
-import { theme } from "../data/theme";
+import { theme } from "../configs/theme";
 import Header from "../components/Header";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -14,13 +14,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <ChakraProvider>
-        <ThemeProvider theme={theme}>
-          <VStack spacing={0}>
-            <Header />
-            <Component {...pageProps} />
-          </VStack>
-        </ThemeProvider>
+      <ChakraProvider theme={theme}>
+        <VStack spacing={0}>
+          <Header />
+          <Component {...pageProps} />
+        </VStack>
       </ChakraProvider>
     </QueryClientProvider>
   );

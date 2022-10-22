@@ -6,12 +6,14 @@ import {
   Heading,
   Image,
   Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import Author from "../_shared/Author";
 import ReactPlayer from "react-player";
 import Category from "../_shared/Category";
 import Tags from "../_shared/Tags";
 import ArticleContent from "../ArticleContent";
+import { dArticleBg1, lArticleBg1 } from "../../configs/colors";
 
 interface Props {
   article: ModelArticle;
@@ -21,6 +23,7 @@ export default function ArticleTemplateOne(p: Props) {
   const [mainImage, setMainImage] = useState<
     undefined | string
   >();
+  const colorBg = useColorModeValue(lArticleBg1, dArticleBg1);
 
   useEffect(() => {
     if (p.article && p.article.assets) {
@@ -34,7 +37,7 @@ export default function ArticleTemplateOne(p: Props) {
   // * return line, and the rest of the content and assets
   // * are drawn separately.
   return (
-    <Box bg={"#eeeeee"} p={"32px 16px 100px 16px"}>
+    <Box bg={colorBg} p={"32px 16px 100px 16px"}>
       <Text as={"title"}>{p.article.title}</Text>
       <Flex direction={"column"}>
         {p.article.category && (

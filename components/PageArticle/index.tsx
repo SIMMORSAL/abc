@@ -1,17 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { css } from "@emotion/react";
-import { Box, Button, Flex, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { useQuery } from "react-query";
 import { getArticle } from "../../data/remote/EndpointsArticle";
 import { TEMPLATE_ID } from "../../data/models/ModelArticle";
 import ArticleTemplateOne from "../ArticleTemplateOne";
 import ArticleTemplateTwo from "../ArticleTemplateTwo";
-import { MAX_WIDTH } from "../../data/theme";
+import { MAX_WIDTH } from "../../configs/theme";
 import LoadingSpinner from "../_shared/LoadingSpinner";
 import { HEADER_HEIGHT } from "../Header";
 import { motion } from "framer-motion";
 import { is } from "@babel/types";
 import Error from "./Error";
+import { dBg, lBg } from "../../configs/colors";
 
 interface Props {
   id: string;
@@ -28,7 +35,7 @@ export default function PageArticle(p: Props) {
     }
   );
 
-  console.log(`11111  PageArticle:  ${error}`);
+  const colorBg = useColorModeValue(lBg, dBg);
 
   const [hideLoading, setHideLoading] = useState(false);
 
@@ -41,7 +48,7 @@ export default function PageArticle(p: Props) {
   }, [isLoading]);
 
   return (
-    <Box bg={"#eaeaea"}>
+    <Box bg={colorBg}>
       <Box display={"grid"}>
         <motion.div
           css={css`

@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { css } from "@emotion/react";
 import { motion } from "framer-motion";
+import { useColorMode } from "@chakra-ui/react";
+import { dText, lText } from "../../configs/colors";
 
 export default function Logo() {
   const colors = ["#b21451", "#188b9b", "#e38c15"];
+  const { colorMode } = useColorMode();
   const [beginAnimation, setBeginAnimation] = useState(false);
 
   useEffect(() => {
@@ -38,7 +41,9 @@ export default function Logo() {
             css={css`
               color: ${beginAnimation
                 ? colors[index]
-                : "#222222"};
+                : colorMode === "light"
+                ? lText
+                : dText};
 
               transition: color 700ms ease;
               transition-delay: ${1000 + index * 300}ms;

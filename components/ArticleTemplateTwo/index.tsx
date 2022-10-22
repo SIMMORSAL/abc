@@ -6,18 +6,34 @@ import {
   Heading,
   Image,
   Text,
+  useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import Category from "../_shared/Category";
 import Author from "../_shared/Author";
 import ArticleContent from "../ArticleContent";
 import Tags from "../_shared/Tags";
-import { MAX_WIDTH_ALTERNATE } from "../../data/theme";
+import { MAX_WIDTH_ALTERNATE } from "../../configs/theme";
+import {
+  dArticleBg1,
+  dArticleBg2,
+  dSummaryGradientEnd,
+  dSummaryGradientStart,
+  lArticleBg1,
+  lArticleBg2,
+  lSummaryGradientEnd,
+  lSummaryGradientStart,
+} from "../../configs/colors";
 
 interface Props {
   article: ModelArticle;
 }
 
 export default function ArticleTemplateTwo(p: Props) {
+  const { colorMode } = useColorMode();
+  const isLight = colorMode === "light";
+  const colorBg = useColorModeValue(lArticleBg2, dArticleBg2);
+
   const [mainImage, setMainImage] = useState<
     undefined | string
   >();
@@ -35,7 +51,7 @@ export default function ArticleTemplateTwo(p: Props) {
   // * are drawn separately.
   return (
     <Box
-      bg={"#d8dee3"}
+      bg={colorBg}
       p={"32px 16px 100px 16px"}
       maxWidth={MAX_WIDTH_ALTERNATE}
       m={"auto"}
@@ -65,7 +81,13 @@ export default function ArticleTemplateTwo(p: Props) {
             border={"2px solid #7E868CFF"}
             rounded={"6px"}
             p={"16px 12px"}
-            bgGradient={`linear(to-r, #C1C7CC88, #CEDBE7FF)`}
+            bgGradient={`linear(to-r, ${
+              isLight
+                ? lSummaryGradientStart
+                : dSummaryGradientStart
+            }, ${
+              isLight ? lSummaryGradientEnd : dSummaryGradientEnd
+            })`}
             shadow={"-4px -3px 45px 12px rgba(0,0,0,0.15)"}
           >
             {p.article.summary}

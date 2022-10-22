@@ -1,16 +1,24 @@
 import React from "react";
 import { css } from "@emotion/react";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import Logo from "./Logo";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { dHeader, lHeader } from "../../configs/colors";
 
 export const HEADER_HEIGHT = 80;
 
 export default function Header() {
+  const colorBg = useColorModeValue(lHeader, dHeader);
+
   return (
     <Box
-      bg={"#d3d3d3"}
+      bg={colorBg}
       w={"100%"}
       borderBottom={"1px solid #9b9b9b"}
     >
