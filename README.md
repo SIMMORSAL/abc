@@ -5,10 +5,9 @@ A news source for the cool kids!
 ### Soheil Sisakht
 ##### Live demo:
 - [abc-roan.vercel.app](http://abc-roan.vercel.app/) 
-- [abc.amp.aws](http://abc-roan.vercel.app/)
 ##### Tech used:
 - Next (v12.3.1) - TypeScript (v4.8.4) - Chakra (v2.3.6) 
-- Amplify - GitHub CI/CD
+- Vercel hosting service
 
 
 This is my application for the article showing 
@@ -22,12 +21,12 @@ For each number, a different UI is shown. Each
 of them essentially contain the same set of features,
 however with differing colors and placements.  
 In case any other number is put in the url, an 
-error message will be diplayed.
+error message will be displayed.
 
 There are three improvements to the model in the 
 task,
 1. `content` is now an `string[]`, and each of 
-it's children are paired with one of `assets` 
+its children are paired with one of `assets` 
 children. 
 2. `tags` is now an `string[]` as well, and they 
 are shown in a row of chips.
