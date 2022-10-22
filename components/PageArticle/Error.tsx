@@ -11,6 +11,7 @@ interface Props {
 export default function Error(p: Props) {
   return (
     <Flex
+      id={"error-box"}
       w={"100%"}
       h={`calc(100vh - ${HEADER_HEIGHT}px)`}
       p={"0 16px"}

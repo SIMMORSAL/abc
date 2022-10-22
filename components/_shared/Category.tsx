@@ -7,8 +7,9 @@ interface Props {
 }
 
 export default function Category(p: Props) {
-  const clickableText = (text: string) => (
+  const clickableText = (text: string, id?: string) => (
     <Text
+      id={id}
       color={"gray"}
       _hover={{
         cursor: "pointer",
@@ -25,7 +26,7 @@ export default function Category(p: Props) {
         {" "}
         {">"}{" "}
       </Text>
-      {clickableText(p.category)}
+      {clickableText(p.category, "category")}
     </HStack>
   );
 }
