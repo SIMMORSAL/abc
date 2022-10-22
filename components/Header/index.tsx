@@ -3,18 +3,23 @@ import { css } from "@emotion/react";
 import {
   Box,
   Flex,
+  IconButton,
   Text,
+  useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
 import Logo from "./Logo";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { dHeader, lHeader } from "../../configs/colors";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 export const HEADER_HEIGHT = 80;
 
 export default function Header() {
   const colorBg = useColorModeValue(lHeader, dHeader);
+  const { colorMode, toggleColorMode } = useColorMode();
+  const isLight = colorMode === "light";
 
   return (
     <Box
@@ -65,6 +70,12 @@ export default function Header() {
           >
             Login
           </Text>
+          <IconButton
+            aria-label={"toggle-dark"}
+            icon={isLight ? <MoonIcon /> : <SunIcon />}
+            ml={3}
+            onClick={() => toggleColorMode()}
+          />
         </motion.div>
       </Flex>
     </Box>
