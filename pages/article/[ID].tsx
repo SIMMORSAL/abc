@@ -1,5 +1,4 @@
 import React from "react";
-import { css } from "@emotion/react";
 import { Box } from "@chakra-ui/react";
 import PageArticle from "../../components/PageArticle";
 import { useRouter } from "next/router";

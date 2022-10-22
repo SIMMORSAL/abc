@@ -15,11 +15,9 @@ import ArticleContent from "../ArticleContent";
 import Tags from "../_shared/Tags";
 import { MAX_WIDTH_ALTERNATE } from "../../configs/theme";
 import {
-  dArticleBg1,
   dArticleBg2,
   dSummaryGradientEnd,
   dSummaryGradientStart,
-  lArticleBg1,
   lArticleBg2,
   lSummaryGradientEnd,
   lSummaryGradientStart,

@@ -1,5 +1,4 @@
 import React from "react";
-import { css } from "@emotion/react";
 import { Button, Flex, Text } from "@chakra-ui/react";
 import { HEADER_HEIGHT } from "../Header";
 

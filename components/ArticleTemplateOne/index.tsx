@@ -9,7 +9,6 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import Author from "../_shared/Author";
-import ReactPlayer from "react-player";
 import Category from "../_shared/Category";
 import Tags from "../_shared/Tags";
 import ArticleContent from "../ArticleContent";

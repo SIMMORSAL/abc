@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { css } from "@emotion/react";
-import { motion } from "framer-motion";
 import { useColorMode } from "@chakra-ui/react";
 import { dText, lText } from "../../configs/colors";
 

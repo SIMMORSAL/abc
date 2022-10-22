@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { css } from "@emotion/react";
-import { Box, Button, Flex, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, useColorModeValue } from "@chakra-ui/react";
 import { useQuery } from "react-query";
 import { getArticle } from "../../data/remote/EndpointsArticle";
 import { TEMPLATE_ID } from "../../data/models/ModelArticle";
@@ -10,7 +10,6 @@ import { MAX_WIDTH } from "../../configs/theme";
 import LoadingSpinner from "../_shared/LoadingSpinner";
 import { HEADER_HEIGHT } from "../Header";
 import { motion } from "framer-motion";
-import { is } from "@babel/types";
 import Error from "./Error";
 import { dBg, lBg } from "../../configs/colors";
 
@@ -21,12 +20,7 @@ interface Props {
 export default function PageArticle(p: Props) {
   const { data, isLoading, isError, refetch, error } = useQuery(
     ["Articles", p.id],
-    getArticle,
-    {
-      onError: (err) => {
-        // console.log(`11111  onError:  ${JSON.stringify(err)}`);
-      },
-    }
+    getArticle
   );
 
   const colorBg = useColorModeValue(lBg, dBg);

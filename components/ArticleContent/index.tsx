@@ -1,5 +1,4 @@
 import React from "react";
-import { css } from "@emotion/react";
 import { Box, Image, Text } from "@chakra-ui/react";
 import ReactPlayer from "react-player";
 

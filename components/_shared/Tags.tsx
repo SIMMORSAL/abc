@@ -1,5 +1,4 @@
 import React from "react";
-import { css } from "@emotion/react";
 import { HStack, Text } from "@chakra-ui/react";
 
 interface Props {
