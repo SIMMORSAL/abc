@@ -19,7 +19,7 @@ export default function Category(p: Props) {
     </Text>
   );
   return (
-    <HStack spacing={2} mb={"48px"}>
+    <HStack spacing={2} mb={"48px"} userSelect={"none"}>
       {clickableText("Articles")}
       <Text color={"gray"} userSelect={"none"}>
         {" "}

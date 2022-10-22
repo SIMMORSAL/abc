@@ -8,7 +8,7 @@ interface Props {
 
 export default function Tags(p: Props) {
   return (
-    <HStack spacing={2}>
+    <HStack spacing={2} userSelect={"none"}>
       {p.tags.map((value) => {
         return (
           <Text
