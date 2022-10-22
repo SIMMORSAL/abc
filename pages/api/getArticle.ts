@@ -88,6 +88,16 @@ NASA and astronomers around the world will be looking to images like these and m
 
 For the rest of us, it's some appealing eye candy just in time for Halloween. 
 `,
+        `
+Newly formed stars are the scene-stealers in this image from Webb’s Near-Infrared Camera (NIRCam). These are the bright red orbs that typically have diffraction spikes and lie outside one of the dusty pillars. When knots with sufficient mass form within the pillars of gas and dust, they begin to collapse under their own gravity, slowly heat up, and eventually form new stars.
+
+What about those wavy lines that look like lava at the edges of some pillars? These are ejections from stars that are still forming within the gas and dust. Young stars periodically shoot out supersonic jets that collide with clouds of material, like these thick pillars. This sometimes also results in bow shocks, which can form wavy patterns like a boat does as it moves through water. The crimson glow comes from the energetic hydrogen molecules that result from jets and shocks. This is evident in the second and third pillars from the top – the NIRCam image is practically pulsing with their activity. These young stars are estimated to be only a few hundred thousand years old.
+
+Although it may appear that near-infrared light has allowed Webb to “pierce through” the clouds to reveal great cosmic distances beyond the pillars, there are almost no galaxies in this view. Instead, a mix of translucent gas and dust known as the interstellar medium in the densest part of our Milky Way galaxy’s disk blocks our view to much of the of the deeper universe.
+`,
+        `
+The James Webb Space Telescope is the world's premier space science observatory. Webb will solve mysteries in our solar system, look beyond to distant worlds around other stars, and probe the mysterious structures and origins of our universe and our place in it. Webb is an international program led by NASA with its partners, ESA (European Space Agency) and CSA (Canadian Space Agency).
+`,
       ],
       category: "Science",
       tags: ["nasa", "space", "webb", "telescope"],
@@ -95,6 +105,7 @@ For the rest of us, it's some appealing eye candy just in time for Halloween.
       assets: [
         "https://www.cnet.com/a/img/resize/3491fe331e64578fb656f18ac80a956206df65fd/hub/2022/10/19/b5925c18-5f1f-48d7-aa47-b5091a5670d6/stsci-01gf49bhzj1wx8w803281hrbcw.jpg?auto=webp&fit=crop&height=675&width=1200",
         "https://www.youtube.com/watch?v=1__KBHIo_xs",
+        "https://www.nasa.gov/sites/default/files/thumbnails/image/stsci-01gfnr1kzzp67ffgv8y26kr0vw.png",
         "https://media.npr.org/assets/img/2021/07/16/hubble-about-eagle-nebular-visible-infrared_wide-d4f2fe1d6bb297c3aeb68c57d3fd1034febfa8ec-s800-c85.webp",
       ],
       template_id: 2,
